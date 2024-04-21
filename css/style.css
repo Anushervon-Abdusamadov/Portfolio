@@ -1,0 +1,538 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI";
+}
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+  position: relative;
+}
+
+@keyframes textFade {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fadeOut {
+    animation: textFade 1.5s ease-in-out forwards;
+}
+
+.nav_block {
+  display: flex;
+  justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 40px 40px;
+  z-index: 1000;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  background-color: #fff;
+}
+
+
+.dark {
+  background-color: #202020;
+  color: #fff;
+}
+
+.dark .links a {
+  color: white;
+}
+
+.dark .nav_block {
+  background-color: #202020;
+}
+
+.dark .myName {
+  text-decoration-color: white !important;
+}
+
+.name_title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.links {
+  display: flex;
+  gap: 54px;
+  align-items: center;
+}
+.links a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+.links button {
+  border: none;
+  background: none;
+}
+.burgerMob {
+  display: none;
+}
+.btnBurger {
+  display: none;
+}
+.linksMob {
+  display: none;
+}
+.themeMob {
+  display: none;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  position: fixed;
+  left: 50px;
+  bottom: 70px;
+  gap: 20px;
+  z-index: 3;
+}
+
+.emailFixed {
+  position: absolute;
+  right: 70px;
+  bottom: 70px;
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+.hero_block {
+  padding: 100px 150px;
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.heroTexts {
+  position: relative;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+}
+.heroTitle {
+  padding-left: 60px;
+  padding: 60px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.heroIcon {
+  width: 220px;
+  display: flex;
+  align-items: center; /* Центрируем элементы по вертикали */
+  justify-content: center;
+}
+.heroIcon img {
+  position: absolute;
+  z-index: -1;
+  left: 10px;
+  top: 50px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 55px;
+}
+.heroName {
+  font-size: 64px;
+  font-weight: 700px;
+}
+.heroName span img {
+  width: 100px;
+}
+.heroButtons {
+  display: flex;
+  gap: 15px;
+}
+.heroButtons button {
+  width: 200px;
+}
+
+.myName {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  color: #737373;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.txt1 {
+  font-weight: 300;
+  padding-bottom: 100px;
+}
+
+.btnDwnl {
+  background: linear-gradient(to right, #df580c, #fd993d);
+  border-color: #fff;
+  border-width: 5px;
+  padding: 20px 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.243);
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.btnTouch {
+  background: linear-gradient(to right, #434343, #000000);
+  border-color: #fff;
+  border-width: 5px;
+  padding: 20px 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.243);
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.secondSection {
+  padding: 100px 150px;
+  padding-left: 600px;
+  position: relative;
+}
+
+.secondBlock {
+  width: 1045px;
+  padding: 30px;
+}
+
+.secondBlock p {
+  font-size: 64px;
+  font-weight: 500;
+}
+
+.secondBlock p span {
+  font-size: 100px;
+}
+
+.secondBlock img {
+  width: 620px;
+}
+
+.captionBlock p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.posAb {
+  position: absolute;
+}
+.vec1 {
+  display: block;
+  left: 0;
+  top: 0px;
+  z-index: 1;
+}
+.vec2 {
+  display: block;
+  left: 0;
+  top: 50px;
+  z-index: 0;
+}
+.vec3 {
+  display: block;
+  left: 400px;
+}
+.vec4 {
+  display: block;
+  right: 300px;
+}
+
+.vec5 {
+  display: block;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.heroButtons2 {
+  display: none;
+}
+
+@media screen and (max-width: 1940px) {
+  .secondBlock {
+    width: 900px;
+    font-size: 16px;
+  }
+  .secondBlock img {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 1815px) {
+  .secondBlock {
+    width: 800px;
+  }
+  .secondBlock img {
+    width: 400px;
+  }
+  .secondBlock p {
+    font-size: 50px;
+  }
+  .secondBlock p span {
+    font-size: 86px;
+  }
+  .captionBlock p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .secondSection {
+    padding-left: 500px;
+  }
+  .vec1 {
+    width: 500px;
+  }
+  .vec2 {
+    width: 380px;
+    top: 100px;
+  }
+  .vec5 {
+    width: 300px;
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .vec1 {
+    width: 400px;
+  }
+  .vec2 {
+    width: 280px;
+    top: 100px;
+  }
+  .secondSection {
+    padding-left: 400px;
+  }
+  .secondBlock {
+    font-size: 14px;
+  }
+  .pic1 {
+    width: 640px;
+  }
+  .captionBlock {
+    width: 640px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .heroIcon {
+    width: 170px;
+    display: flex;
+    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: center;
+  }
+  .captionBlock {
+    width: 600px;
+  }
+  .pic1 {
+    width: 600px;
+  }
+  .heroIcon img {
+    width: 150px;
+  }
+  .heroTitle {
+    font-size: 25px;
+    padding-left: 55px;
+  }
+  .heroName {
+    font-size: 55px;
+  }
+  .myName {
+    font-size: 46px;
+  }
+  .heroName span img {
+    width: 65px;
+  }
+  .txt1 {
+    font-size: 26px;
+  }
+  .vec3 {
+    display: none;
+  }
+  .vec4 {
+    display: none;
+  }
+  .vec5 {
+    display: none;
+  }
+  .links {
+    display: none;
+  }
+  .burgerMob {
+    display: flex;
+    gap: 20px;
+  }
+  .dark .btnBurger {
+    background-color: #202020;
+  }
+  .btnBurger {
+    display: block;
+    border: none;
+    background-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  .themeMob {
+    display: block;
+    border: none;
+    background: none;
+  }
+  .linksMob {
+    position: relative;
+  }
+  .active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    gap: 10px;
+    background-color: gainsboro;
+    padding: 30px;
+    border-radius: 20px;
+  }
+  .active a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .hero_block {
+    flex-direction: column;
+  }
+  .heroButtons {
+    display: none;
+  }
+  .heroButtons2 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+  .txt1 {
+    padding-bottom: 10px;
+  }
+  .divMe {
+    display: flex;
+    justify-content: center;
+  }
+  .secondBlock {
+    width: 600px;
+  }
+  .secondBlock p {
+    width: 540px;
+  }
+  .secondBlock span img {
+    width: 250px;
+  }
+  .vec1 {
+    left: -100px;
+  }
+  .vec2 {
+    left: -100px;
+  }
+  .secondSection {
+    padding-left: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .vec1 {
+    left: -200px;
+  }
+  .vec2 {
+    left: -200px;
+  }
+  .secondSection {
+    padding-left: 180px;
+  }
+  .captionBlock {
+    width: 500px;
+  }
+  .secondBlock span img {
+    width: 150px;
+  }
+  .secondBlock p {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .secondBlock p {
+    width: 400px;
+  }
+  .secondBlock span img {
+    width: 100px;
+  }
+  .secondBlock {
+    width: 400px;
+  }
+  .vec1 {
+    display: none;
+  }
+  .vec2 {
+    display: none;
+  }
+  .secondSection {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero_block {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .pic1 {
+    width: 400px;
+  }
+
+  .secondBlock p {
+    width: 300px;
+  }
+  .secondBlock p span img {
+    display: none;
+  }
+  .captionBlock {
+    width: 300px;
+  }
+  .captionBlock p {
+    width: 300px;
+  }
+
+  .heroName {
+    font-size: 40px;
+  }
+  .heroName span img {
+    width: 60px;
+  }
+  .myName {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .socialMedia {
+    display: none;
+  }
+  .emailFixed {
+    display: none;
+  }
+  .heroButtons2 button {
+    font-size: 15px;
+  }
+}
