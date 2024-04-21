@@ -66,7 +66,7 @@ const socialMediaLinks = [
   },
   {
     url: "https://www.linkedin.com/in/anushervon-abdusamadov-4672b92a6",
-    icon: "./assets/Linkedin.svg",
+    icon: "/assets/Linkedin.svg",
     alt: "Linkedin",
   },
   {
@@ -206,22 +206,7 @@ I have been studying programming (Front-end) for more than half a year. I am a p
 secondBlock.appendChild(p);
 secondBlock.appendChild(captionBlock);
 
-// const vecImages = [
-//   "./assets/Rectangle.svg",
-//   "./assets/Vector 1.svg",
-//   "./assets/Vector 4.svg",
-//   "./assets/Vector 5.svg",
-//   "./assets/Vector 3.svg",
-// ];
 
-// vecImages.forEach((src, index) => {
-//   const img = document.createElement("img");
-//   img.className = `posAb vec`;
-//   img.src = src;
-//   img.alt = "";
-//   img.id = "vec";
-//   secondSection.appendChild(img);
-// });
 const vec1 = document.createElement("img");
 vec1.classList.add("posAb", "vec1");
 vec1.src = "./assets/Rectangle.svg";
