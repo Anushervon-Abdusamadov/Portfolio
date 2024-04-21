@@ -66,7 +66,7 @@ const socialMediaLinks = [
   },
   {
     url: "https://www.linkedin.com/in/anushervon-abdusamadov-4672b92a6",
-    icon: "/assets/Linkedin.svg",
+    icon: "./assets/Linkedin.svg",
     alt: "Linkedin",
   },
   {
@@ -145,6 +145,16 @@ heroButtons.className = "heroButtons";
 const btnDwnl1 = document.createElement("button");
 btnDwnl1.className = "btnDwnl";
 btnDwnl1.textContent = "Download CV";
+btnDwnl1.onclick = downloadFile;
+
+function downloadFile() {
+  var link = document.createElement("a");
+  link.download = "CV_A"; // Указываем имя файла, который нужно скачать
+  link.href = "https://drive.google.com/file/d/1ulFs06o93lOd7_EwHeZ4e0hPKrOsBwfT/view?usp=sharing"; // Указываем путь к файлу для скачивания
+  document.body.appendChild(link); // Добавляем ссылку в DOM
+  link.click(); // Вызываем метод click() для запуска скачивания
+  document.body.removeChild(link); // Удаляем ссылку из DOM
+}
 
 const btnTouch1 = document.createElement("button");
 btnTouch1.className = "btnTouch";
@@ -206,7 +216,6 @@ I have been studying programming (Front-end) for more than half a year. I am a p
 secondBlock.appendChild(p);
 secondBlock.appendChild(captionBlock);
 
-
 const vec1 = document.createElement("img");
 vec1.classList.add("posAb", "vec1");
 vec1.src = "./assets/Rectangle.svg";
@@ -236,9 +245,7 @@ vec5.src = "./assets/Vector 3.svg";
 vec5.alt = "";
 vec5.id = "vec5";
 
-
 secondSection.appendChild(secondBlock);
-
 
 secondSection.appendChild(vec1);
 secondSection.appendChild(vec2);
@@ -248,7 +255,6 @@ secondSection.appendChild(vec5);
 
 document.body.appendChild(heroBlock);
 document.body.appendChild(secondSection);
-
 
 const themButton = document.getElementById("themeButton");
 const themButton2 = document.getElementById("themeButtonMob");
@@ -322,4 +328,3 @@ themButton2.addEventListener("click", () => {
 document.querySelector(".btnBurger").addEventListener("click", function () {
   document.querySelector(".linksMob").classList.toggle("active");
 });
-
