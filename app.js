@@ -1,4 +1,3 @@
-// Создаем элементы
 const navBlock = document.createElement("nav");
 navBlock.className = "nav_block";
 
@@ -66,7 +65,7 @@ const socialMediaLinks = [
   },
   {
     url: "https://www.linkedin.com/in/anushervon-abdusamadov-4672b92a6",
-    icon: "./assets/Linkedin.svg",
+    icon: "./assets/link.svg",
     alt: "Linkedin",
   },
   {
