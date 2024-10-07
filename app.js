@@ -65,7 +65,7 @@ const socialMediaLinks = [
   },
   {
     url: "https://www.linkedin.com/in/anushervon-abdusamadov-4672b92a6",
-    icon: "./assets/link.svg",
+    icon: "./assets/Linkedin.svg",
     alt: "Linkedin",
   },
   {
@@ -93,8 +93,8 @@ socialMediaLinks.forEach((item) => {
 const emailFixed = document.createElement("p");
 emailFixed.className = "emailFixed";
 emailFixed.innerHTML = `
-  <span><img id="line" src="./assets/line.svg" alt="shadowzver0@gmail.com" /></span>
-  shadowzver0@gmail.com
+  <span><img id="line" src="./assets/line.svg" alt="anushervon.a14@gmail.com" /></span>
+  anushervon.a14@gmail.com
 `;
 
 // Добавляем элементы на страницу
@@ -148,8 +148,10 @@ btnDwnl1.onclick = downloadFile;
 
 function downloadFile() {
   var link = document.createElement("a");
-  link.download = "CV_A"; // Указываем имя файла, который нужно скачать
-  link.href = "https://drive.google.com/file/d/1ulFs06o93lOd7_EwHeZ4e0hPKrOsBwfT/view?usp=sharing"; // Указываем путь к файлу для скачивания
+  link.download = "CV_A";
+  link.href =
+    "https://drive.google.com/file/d/1_I_xiLDpFrkSVQAJUyPDuGCWXBd4oDfw/view?usp=sharing";
+
   document.body.appendChild(link); // Добавляем ссылку в DOM
   link.click(); // Вызываем метод click() для запуска скачивания
   document.body.removeChild(link); // Удаляем ссылку из DOM
